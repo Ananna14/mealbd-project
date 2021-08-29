@@ -13,6 +13,7 @@ const searchFood = () => {
 
 const diplaySearchResult = meals => {
     const searchResult = document.getElementById('search-result');
+    searchResult.textContent = '';
     meals.forEach(meal => {
         // console.log(meal);
         const div = document.createElement('div');
@@ -41,6 +42,7 @@ const loadMealDetail = mealId => {
 const displayMealDetail = meal => {
     console.log(meal);
     const mealDetail = document.getElementById('meal-details');
+    mealDetail.textContent = '';
     const div = document.createElement('div');
     div.classList.add('card');
     div.innerHTML = ` <img src='${meal.strMealThumb}' class="card-img-top" alt="...">
